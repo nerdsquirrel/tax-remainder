@@ -1,0 +1,314 @@
+﻿@using System.Web.UI.WebControls.Expressions
+@model Tax_Reminder.Models.ContactUsModel
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<style type="text/css">
+    .glyphicon {
+        font-size: 50px;
+        color: #000;
+    }
+
+    .vcenter {
+        margin-top: 10%;
+        margin-left: 3%;
+    }
+
+    .nopadding {
+        margin-right: 0px;
+        margin-top: 5%;
+    }
+
+    .nopadding1 {
+        padding: 0px 0px;
+    }
+
+    .vcenter1 {
+        margin-top: 11.5%;
+    }
+
+    .howitworks-header1 {
+        margin-bottom: 15px;
+    }
+
+    .input1 {
+        max-width: 80%;
+        height: 59px;
+    }
+
+    #share-buttons img {
+        width: 3.6vw;
+        padding: 5px;
+        margin-right: 5px;
+        border: 0;
+        box-shadow: 0;
+        display: inline;
+    }
+
+    .form-horizontal label {
+        font-size: 30px;
+    }
+
+    .contactUs {
+        margin-bottom: 5%;
+    }
+
+   
+</style>
+
+
+<!-- Introduction Section-->
+
+<section id="intro" class="intro-section">
+    <div class="space">
+        <div class="col-md-6 col-lg-6 vcenter">
+            <div class="row headerDesign">
+
+                <div class="col-md-1 nopadding">
+                    <a href="#">
+                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                    </a>
+                </div>
+
+                <div class="col-md-11">
+                    <h2>AVOID A HEFTY <span style="color: red">£1,000</span> FINE</h2>
+                    <h2>TAX & MOT YOUR VEHICLE ON TIME</h2>
+                </div>
+
+
+            </div>
+
+            <div class="row" style="text-align: center;">
+                @Html.ActionLink("Remind Me Now", "Create",
+                    new { controller = "TaxInformation", id = 1 },
+                    new { @class = "btn btn-success" })
+            </div>
+        </div>
+
+        <div class="col-md-1 col-lg-1" style="width: 10px;">
+            <span></span>
+        </div>
+
+        <div class="col-md-5 col-lg-5 img-style">
+            <img src="~/Content/img/Untaxed_Car.jpg" class="img-responsive" />
+        </div>
+
+    </div>
+</section>
+
+<!-- How It Works Section-->
+
+<section id="howitworks" class="howitworks-section">
+    <div class="">
+        <div class="col-lg-12 howitworks-header">
+            <h1>How It Works</h1>
+        </div>
+
+        <div class="col-lg-12">
+            <div class="col-md-6 col-xs-6 text-style-HowItWorks">
+                <h2>YOU</h2>
+                <div class="container">
+                    <div class="col-md-1">
+                        <a href="#">
+                            <img src="~/Content/img/iuser.png" class="img-responsive" />
+                        </a>
+                    </div>
+
+                    <div class="col-md-11">
+                        <h3>Tell us your Vehicle Make & Registration</h3>
+                    </div>
+
+
+                </div>
+
+                <div class="container">
+                    <div class="col-md-1">
+                        <a href="#">
+                            <img src="~/Content/img/ihappy.png" class="img-responsive" />
+                        </a>
+                    </div>
+
+                    <div class="col-md-11">
+                        <h3>Then sit back and relax whilst we do the rest</h3>
+                    </div>
+
+                </div>
+
+                <h2>WE</h2>
+                <div class="container">
+                    <div class="col-md-1">
+                        <a href="#">
+                            <img src="~/Content/img/isearch.png" class="img-responsive" />
+                        </a>
+                    </div>
+
+                    <div class="col-md-11">
+                        <h3>Will check your Road Tax & MOT due dates for you</h3>
+                    </div>
+
+
+                </div>
+
+                <div class="container">
+                    <div class="col-md-1">
+                        <a href="#">
+                            <img src="~/Content/img/icalendar-check-o.png" class="img-responsive" />
+                        </a>
+                    </div>
+
+                    <div class="col-md-11">
+                        <h3>Will set-up your renewal reminders to notify you 28-days, 7-days & 1 day before your Tax & MOT due dates</h3>
+                    </div>
+
+                </div>
+
+                <div class="container">
+                    <div class="col-md-1">
+                        <a href="#">
+                            <img src="~/Content/img/ialert_box_black.png" class="img-responsive" />
+                        </a>
+                    </div>
+
+                    <div class="col-md-11">
+                        <h3>Will email you a printable reminder disc for you to  display on your vehicle windscreen</h3>
+                    </div>
+
+                </div>
+
+
+                <div class="row buy-button" style="text-align: center;">
+                    @Html.ActionLink("BUY NOW ONLY £1.99", "Create",
+                    new { controller = "TaxInformation", id = 1 },
+                    new { @class = "btn btn-success" })
+                </div>
+
+            </div>
+
+            <div class="col-md-1 col-xs-1">
+
+            </div>
+
+            <div class="col-md-5 col-xs-5">
+                <img src="~/Content/img/disc-front-main.png" class="img-responsive" />
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Services Section -->
+<section id="services" class="referAFriend-section">
+    <div class="row">
+        <div class="col-lg-12 howitworks-header howitworks-header1">
+            <h1>Invite Your Friends</h1>
+        </div>
+
+        <div class="container">
+            <div class="col-md-5 col-lg-5">
+                <img src="~/Content/img/share.jpg" class="img-responsive" />
+            </div>
+
+            <div class="col-md-7 col-lg-7 vcenter1">
+                <form>
+                    <div class="form-group row">
+
+                        <input style="display: inline-block" type="email" class="form-control input1" id="email">
+
+                        <button style="display: inline-block" type="submit" class="btn btn-success">Send</button>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div id="share-buttons">
+
+
+                <!-- Email -->
+                <a href="mailto:?Subject=Simple Share Buttons&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20 https://simplesharebuttons.com">
+                    <img src="https://simplesharebuttons.com/images/somacro/email.png" alt="Email" />
+                </a>
+
+                <!-- Facebook -->
+                <a href="http://www.facebook.com/sharer.php?u=https://simplesharebuttons.com" target="_blank">
+                    <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
+                </a>
+
+                <!-- Google+ -->
+                <a href="https://plus.google.com/share?url=https://simplesharebuttons.com" target="_blank">
+                    <img src="https://simplesharebuttons.com/images/somacro/google.png" alt="Google" />
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://simplesharebuttons.com" target="_blank">
+                    <img src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" />
+                </a>
+
+                <!-- Pinterest -->
+                <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());">
+                    <img src="https://simplesharebuttons.com/images/somacro/pinterest.png" alt="Pinterest" />
+                </a>
+
+
+
+                <!-- Twitter -->
+                <a href="https://twitter.com/share?url=https://simplesharebuttons.com&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons" target="_blank">
+                    <img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" />
+                </a>
+
+
+
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+
+    <div class="col-lg-12 howitworks-header contactUs">
+        <h1>Contact Us</h1>
+    </div>
+
+    <div class="container">
+        <form class="form-horizontal" action="" method="post">
+            <fieldset>
+                <br />
+
+                <!-- Name input-->
+                <div class="form-group">
+                    <label class="col-md-3 control-label" for="name">Name</label>
+                    <div class="col-md-9">
+                        <input id="name" name="name" type="text" placeholder="Your name" class="form-control input1">
+                    </div>
+                </div>
+
+                <!-- Email input-->
+                <div class="form-group">
+                    <label class="col-md-3 control-label" for="email">Your E-mail</label>
+                    <div class="col-md-9">
+                        <input id="email" name="email" type="text" placeholder="Your email" class="form-control input1">
+                    </div>
+                </div>
+
+                <!-- Message body -->
+                <div class="form-group">
+                    <label class="col-md-3 control-label" for="message">Your message</label>
+                    <div class="col-md-9">
+                        <textarea class="form-control input1" id="message" name="message" placeholder="Please enter your message here..." rows="7"></textarea>
+                    </div>
+                </div>
+
+                <!-- Form actions -->
+                <div class="form-group">
+                    <label class="col-md-3 control-label"></label>
+                    <div class="col-md-9 text-left">
+                        <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                    </div>
+                    
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</section>

@@ -1,0 +1,169 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>HTMLtoPDF</title>
+</head>
+<body>
+    <div>
+    </div>
+</body>
+</html>
+
+<style>
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        /* display: none; <- Crashes Chrome on hover */
+        -webkit-appearance: none;
+        margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+    }
+
+    .general-style {
+        margin-top: 5%;
+    }
+
+    .pdf-image {
+        margin: 0;
+        background-image: url('../../Content/img/disc.PNG');
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 500px;
+    }
+
+    .tax-due {
+        margin-top: 7%;
+        margin-left: 6%;
+    }
+
+        .tax-due input {
+            height: 70px;
+            width: 70px;
+            margin-right: 2px;
+            background-color: #7601B0;
+            font-size: 40px;
+            box-shadow: none;
+            border-radius: 8px;
+            border: none;
+            color: white;
+            font-weight: 900;
+            text-align: center;
+        }
+
+    .col-md-21 {
+        width: 13.2%;
+        display: inline-block;
+    }
+
+    .vehicle-name {
+        margin-top: 6%;
+        margin-left: 10%;
+    }
+
+        .vehicle-name input {
+            height: 63px;
+            width: 63%;
+            margin-right: 2px;
+            background-color: #91358C;
+            font-size: 30px;
+            box-shadow: none;
+            border-radius: 8px;
+            border: none;
+            color: white;
+            font-weight: 900;
+            text-align: center;
+            border: 3px dashed white;
+        }
+
+
+    .mot-due {
+        margin-top: 8.5%;
+        margin-left: 6%;
+    }
+
+        .mot-due input {
+            height: 70px;
+            width: 70px;
+            margin-right: 2px;
+            background-color: #7601B0;
+            font-size: 40px;
+            box-shadow: none;
+            border-radius: 8px;
+            border: none;
+            color: white;
+            font-weight: 900;
+            text-align: center;
+        }
+
+    .col-md-21 {
+        width: 13.2%;
+        display: inline-block;
+    }
+</style>
+
+
+
+<div class="container">
+    <div class="row pdf-image general-style" id="DivToGeneratePDF">
+        <div class="row nomargin tax-due">
+            <div class="col-md-4"></div>
+            <div class="col-md-8">
+                <div class="col-md-21">
+                    <input type="number" value="Tax Day" />
+                </div>
+
+                <div class="col-md-21">
+                    <input type="number" value="Tax Day" />
+                </div>
+
+                <div class="col-md-21">
+                    <input type="number" value="Tax Day" />
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="row nomargin vehicle-name">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <input type="text" value="" placeholder="Vehicle" />
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+
+
+
+        <div class="row nomargin mot-due">
+            <div class="col-md-4"></div>
+            <div class="col-md-8">
+                <div class="col-md-21">
+                    <input type="number" value="Tax Day" />
+                </div>
+
+                <div class="col-md-21">
+                    <input type="number" value="Tax Day" />
+                </div>
+
+                <div class="col-md-21">
+                    <input type="number" value="Tax Day" />
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    
+    <a href="@Url.Action("HTMLtoPDF", "DiscDesign")">Generate PDF</a>
+
+    
+</div>
+
+
+
+

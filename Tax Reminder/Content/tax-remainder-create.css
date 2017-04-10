@@ -1,0 +1,70 @@
+﻿.header0 {
+        margin-top: 5%;
+    }
+
+    .header0 h1{
+        margin-bottom: 5%;
+        font-weight: 900;
+        border-bottom: 2px solid #000000;
+        padding-bottom: 5px;
+    }
+
+    .header0 input{
+        max-width: 64%;
+        border: 1px solid #cccccc;
+    height: 46px;
+    line-height: 46px;
+    background: #f2f2f2;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+        text-indent: 8px;
+    position: relative;
+    border-radius: 3px;
+    }
+
+    .header0 label{
+        font-size: 1.5vw;
+        padding-top: 0px!important;
+    }
+
+    .isagree a{
+        font-size: 1.5vw;
+    padding-top: 0px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    }
+
+    .isagree label{
+        text-align: left!important;
+        padding: 0px;
+        margin-top: 5px;
+    }
+
+    .check input {
+        padding-right: 0px;
+    }
+
+    .nopadding1 {
+        padding: 0px!important;
+    }
+
+    .nomargin {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .submit-button {
+        border-top: 2px solid #CCC;
+            padding-top: 15px;
+    }
+
+    .submit-button label{
+        float: right;
+    }
+
+    .submit-button input{
+            line-height: 0px;
+        background-color: #B31166;
+}
+

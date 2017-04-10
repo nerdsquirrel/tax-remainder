@@ -1,0 +1,189 @@
+﻿@model Tax_Reminder.Models.TaxInformationModel
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<style>
+    .header0 {
+        margin-top: 5%;
+    }
+
+        .header0 h1 {
+            margin-bottom: 5%;
+            font-weight: 900;
+            border-bottom: 2px solid #000000;
+            padding-bottom: 5px;
+        }
+
+        .header0 input {
+            max-width: 64%;
+            border: 1px solid #cccccc;
+            height: 46px;
+            line-height: 46px;
+            background: #f2f2f2;
+            box-shadow: none;
+            -webkit-box-shadow: none;
+            text-indent: 8px;
+            position: relative;
+            border-radius: 3px;
+        }
+
+        .header0 label {
+            font-size: 1.5vw;
+            padding-top: 0px !important;
+        }
+
+    .isagree a {
+        font-size: 1.5vw;
+        padding-top: 0px;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-left: 0;
+    }
+
+    .isagree label {
+        text-align: left !important;
+        padding: 0px;
+        margin-top: 14px;
+    }
+
+    .check input {
+        padding-right: 0px;
+    }
+
+    .nopadding1 {
+        padding: 0px !important;
+    }
+
+    .nomargin {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .submit-button {
+        border-top: 2px solid #CCC;
+        padding-top: 15px;
+    }
+
+        .submit-button label {
+            float: right;
+        }
+
+        .submit-button input {
+            line-height: 0px;
+            background-color: #B31166;
+        }
+</style>
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="row nomargin header0">
+        <div class="col-md-1 col-lg-1"></div>
+        <div class="form-horizontal col-md-7 col-lg-7 col-sm-12 col-xs-12 control-label1">
+            <h1>Edit</h1>
+
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.VehicleRegistration, "Vehicle Registration", htmlAttributes: new { @class = "control-label control-label1 col-md-4" })
+                <div class="col-md-8">
+                    @Html.EditorFor(model => model.VehicleRegistration, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.VehicleRegistration, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.VehicleMake, "Vehicle Make", htmlAttributes: new { @class = "control-label col-md-4" })
+                <div class="col-md-8">
+                    @Html.EditorFor(model => model.VehicleMake, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.VehicleMake, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-4" })
+                <div class="col-md-8">
+                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.ReferralCode, "Referral Code", htmlAttributes: new { @class = "control-label col-md-4" })
+                <div class="col-md-8">
+                    @Html.EditorFor(model => model.ReferralCode, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.ReferralCode, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.CardNumber, "Card Number", htmlAttributes: new { @class = "control-label col-md-4" })
+                <div class="col-md-8">
+                    @Html.EditorFor(model => model.CardNumber, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.CardNumber, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.CvcSecurityCode, "CVC (Security code)", htmlAttributes: new { @class = "control-label col-md-4" })
+                <div class="col-md-8">
+                    @Html.EditorFor(model => model.CvcSecurityCode, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.CvcSecurityCode, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Expiry, htmlAttributes: new { @class = "control-label col-md-4" })
+                <div class="col-md-8">
+                    @Html.EditorFor(model => model.Expiry, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Expiry, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-4"></div>
+                <div class="col-md-1 check">
+                    @Html.EditorFor(model => model.IsAgree, new { htmlAttributes = new { @class = "form-control nopadding1" } })
+                    @Html.ValidationMessageFor(model => model.IsAgree, "", new { @class = "text-danger" })
+                </div>
+                <div class="col-md-6 isagree nopadding1">
+                    @*@Html.LabelFor(model => model.IsAgree, "I agree to the",htmlAttributes: new { @class = "control-label col-md-4 nopadding1" })*@
+                    @*@Html.ActionLink("terms and conditions","TermsCondition")*@
+                    @*<a class="col-md-8 nopadding1" href="#" target="_blank">terms and conditions</a>*@
+                    <label for="IsAgree"><span></span> I agree to the <a href="#" target="_blank">terms and conditions</a></label>
+                </div>
+                @*<input class="checkbox" type="checkbox" id="terms" name="terms" value="1">
+                    <label for="terms"><span></span></label> I agree to the <a href="#" target="_blank">terms and conditions</a>*@
+            </div>
+
+            <div class="form-group submit-button">
+                <div class="col-md-4">
+                    <label class="control-label">TOTAL: £1.99</label>
+                </div>
+
+                <div class="col-md-6">
+                    <input type="submit" value="Done" class="btn btn-success" />
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+        <div class="form-horizontal col-md-3 col-lg-3 col-sm-12 col-xs-12">
+            @*<h3 style="text-align: center">Your Tax Disk Design</h3>
+                <img src="@Url.Content("~/Content/img/disc-front-main.png")" alt="Tax Disc Front End Design" class="img-responsive" />*@
+        </div>
+
+        <div class="col-lg-1 col-md-1"></div>
+
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

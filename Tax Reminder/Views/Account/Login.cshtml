@@ -1,0 +1,148 @@
+﻿@using Tax_Reminder.Models
+@model LoginViewModel
+@{
+    ViewBag.Title = "Log in";
+}
+<style>
+    .header0 {
+        margin-top: 5%;
+    }
+
+        .header0 h1 {
+            margin-bottom: 5%;
+            font-weight: 900;
+            border-bottom: 2px solid #000000;
+            padding-bottom: 5px;
+        }
+
+        .header0 h2 {
+            margin-bottom: 5%;
+            font-weight: 900;
+            border-bottom: 2px solid #000000;
+            padding-bottom: 5px;
+        }
+
+        .header0 input {
+            max-width: 64%;
+            border: 1px solid #cccccc;
+            height: 46px;
+            line-height: 46px;
+            background: #f2f2f2;
+            box-shadow: none;
+            -webkit-box-shadow: none;
+            text-indent: 8px;
+            position: relative;
+            border-radius: 3px;
+        }
+
+        .header0 label {
+            font-size: 1.5vw;
+            padding-top: 0px !important;
+        }
+
+    .isagree a {
+        font-size: 1.5vw;
+        padding-top: 0px;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-left: 0;
+    }
+
+    .isagree label {
+        text-align: left !important;
+        padding: 0px;
+        margin-top: 5px;
+    }
+
+    .check input {
+        padding-right: 0px;
+    height: 35px;
+    width: 30px;
+    margin-right: 10px;
+
+    }
+
+    .nopadding1 {
+        padding: 0px !important;
+    }
+
+    .nomargin {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .submit-button {
+        border-top: 2px solid white;
+        padding-top: 15px;
+    }
+
+        .submit-button label {
+            float: right;
+        }
+
+        .submit-button input {
+            line-height: 0px;
+            background-color: #B31166;
+        }
+
+
+        .link-design p{
+            font-size: 1.0vw;
+        }
+</style>
+
+@using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+    @Html.AntiForgeryToken()
+    <div class="row nomargin header0">
+        <div class="col-md-1 col-lg-1"></div>
+        <div class="form-horizontal col-md-7 col-lg-7 col-sm-12 col-xs-12 control-label1">
+            <h2>Log In</h2>
+
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+                <div class="col-md-10">
+                    @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <div class="checkbox check">
+                        @Html.CheckBoxFor(m => m.RememberMe)
+                        @Html.LabelFor(m => m.RememberMe)
+                    </div>
+                </div>
+            </div>
+            <div class="form-group submit-button">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Log in" class="btn btn-success" />
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10 link-design">
+                    <p>
+                        @Html.ActionLink("Register as a new user", "Register")
+                    </p>
+
+                    <p>
+                        @Html.ActionLink("Forgot your password?", "ForgotPassword")
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

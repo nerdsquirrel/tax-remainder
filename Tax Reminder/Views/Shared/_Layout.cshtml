@@ -1,0 +1,176 @@
+﻿@using Tax_Reminder.App_Start
+@using Microsoft.AspNet.Identity
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - RoadTaxReminderMe</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/scrolling-nav.css" rel="stylesheet" />
+
+    @*<script src="~/Scripts/jquery-1.11.3.min.js"></script>
+        <script src="~/Scripts/angular.min.js"></script>
+        <script src="~/Scripts/app.js"></script>
+        <script src="~/Scripts/cbpSplitLayout.js"></script>
+        <script src="~/Scripts/jquery.countdown.js"></script>
+        <script src="~/Scripts/classie.js"></script>
+        <script src="~/Scripts/jquery.placeholder.js"></script>
+        <script src="~/Scripts/controllers.js"></script>
+        <script src="~/Scripts/demo-1.js"></script>
+        <script src="~/Scripts/typed.js"></script>
+        <script src="~/Scripts/EasePack.min.js"></script>
+        <script src="~/Scripts/input-text.js"></script>
+        <script src="~/Scripts/init.js"></script>
+        <script src="~/Scripts/modernizr-2.6.2.js"></script>
+        <script src="~/Scripts/notifyMe.js"></script>
+        <script src="~/Scripts/owl.carousel.js"></script>
+        <script src="~/Scripts/rAF.js"></script>
+        <script src="~/Scripts/TweenLite.min.js"></script>
+
+
+
+        <link href="~/Content/animate.css" rel="stylesheet" />
+        <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+        <link href="~/Content/inputtext.css" rel="stylesheet" />
+        <link href="~/Content/component2.css" rel="stylesheet" />
+        <link href="~/Content/owl.carousel.css" rel="stylesheet" />
+        <link href="~/Content/jquery.countdown.css" rel="stylesheet" />*@
+    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+    <style>
+        body {
+            /*position: relative;
+            margin: 0;
+            padding-bottom: 6rem;
+            min-height: 100%;
+            height: 100%;*/
+            font-family: 'Lato', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /*#footer {
+    clear: both;
+    position: relative;
+    z-index: 10;
+    height: 3em;
+    margin-top: -3em;
+}*/
+    </style>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Oswald:400,700|Roboto+Slab:400,700|Roboto:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" >
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse .navbar-ex1-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("RoadTaxRemindMe.com", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="" id="">
+                        <a class="page-scroll" href="#page-top">Home</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#howitworks">How It Works</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#services">Refer A Friend</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact Us</a>
+                    </li>
+                    <li>
+                        @if (ViewContext.HttpContext.User.Identity.Name == "nafeeur.kuet.cse6@gmail.com")
+                        {
+                            @Html.ActionLink("Sent Disc", "Index", "TaxInformation")
+                        }
+
+                    </li>
+                </ul>
+                @if (Request.IsAuthenticated)
+                {
+                    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+                    {
+                        @Html.AntiForgeryToken()
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+                            </li>
+                            <li><a href="javascript:document.getElementById('logoutForm').submit()">Log Out</a></li>
+                        </ul>
+                    }
+                }
+                else
+                {
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+                        <li>@Html.ActionLink("Log in ||", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+                    </ul>
+                }
+
+            </div>
+        </div>
+    </nav>
+    
+    @RenderBody()
+<div class="body-content-footer">  
+    <footer id="footer">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="col-lg-12 footer-design">
+                <div class="col-md-8 col-lg-8">
+                    <p>Penalties for driving without Road Tax or lapsed MOT</p>
+                </div>
+
+                <div class="col-md-3 col-lg-3 pull-left">
+                    <img src="~/Content/img/warning.png" class="img-responsive"/>
+                </div>
+                
+                
+                <div class="style-p col-md-12 col-lg-12 col-sm-12">
+                    <p>
+                        Untaxed vehicles not declared SORN are issued an automated letter and a fine of £80.
+                        Failure to settle the fine could result in prosecution and see the fine increase to a maximum of £1,000.
+                        The DVLA also have the power to clamp untaxed vehicles.
+                    </p>
+
+               
+
+                    <p>
+                        Driving without a valid MOT carries a fine of up to £1,000.
+                        You can’t drive your vehicle on the road if the MOT has run out and you could be prosecuted if caught.
+                    </p>
+                </div>
+            </div>
+            
+            
+
+            <p style="color: white; font-size: 1vw; text-align: center">&copy; @DateTime.Now.Year - RoadTaxReminderMe</p>
+            </div>
+    </footer>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+    <script src="~/Scripts/jquery.js"></script>
+    <script src="~/Scripts/jquery.easing.min.js"></script>
+    <script src="~/Scripts/scrolling-nav.js"></script>
+</body>
+</html>

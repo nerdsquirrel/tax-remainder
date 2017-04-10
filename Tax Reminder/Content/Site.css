@@ -1,0 +1,310 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+/* Personal Classes*/
+.headerDesign {
+    border: 5px solid yellow;
+    border-radius: 20px;
+    margin-bottom: 10%;
+}
+
+    .headerDesign h2 {
+        font-family: 'Lato', sans-serif;
+        /*font-size: 26px;*/
+        font-weight: 900;
+        color: black;
+        margin-left: 15px;
+        font-size: 2.4vw;
+    }
+
+#Example_G {
+    -moz-box-shadow: inset -5px -5px #888;
+    -webkit-box-shadow: inset -5px -5px #888;
+    box-shadow: inset -5px -5px #888;
+}
+
+.navbar-inverse .navbar-nav > .active > a {
+    padding: 5px;
+    margin-top: 10px;
+    background-color: #20000D;
+    padding-right: 6px;
+    border: 2px solid black;
+}
+
+.img-style {
+    margin-top: 1%;
+}
+
+.text-style-HowItWorks {
+    margin-left: 5%;
+}
+
+.text-style-HowItWorks h2 {
+    font-family: 'Lato', sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    text-align: left;
+    margin-top: 8%;
+    margin-left: 11%;
+}
+
+#footer {
+    background-color: #36254D;
+}
+
+.footer-design {
+    height: auto;
+    color: white;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.footer-design h4{
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 35px;
+    text-align: center;
+    margin-top: 4%;
+}
+
+.footer-design p{
+    color: white;
+    font-size: 2.5vw;
+    text-align: center;
+    margin-top: 5%;
+    font-family: 'Lato', sans-serif;
+}
+
+.style-p p{
+    color: white;
+    font-size: 1.5vw;
+    text-align: left;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+
+.footer-design1 p{
+    color: white;
+    font-size: 1.3vw;
+}
+
+.text-style-HowItWorks h3{
+    font-size: 1.5vw;
+    float: left;
+    font-weight: 700;
+    text-align: left;
+    font-family: 'Lato', sans-serif;
+}
+
+.buy-button a{
+    margin-top: 7%;
+}
+
+.text-style-HowItWorks img{
+    float: right;
+    margin-top: 15px;
+}
+
+
+.howitworks-header {
+    background-color: #572B5C;
+    color: white;
+    padding-bottom: 12px;
+    padding-top: 1px;
+}
+
+.howitworks-header h1{
+    font-weight: 900;
+    font-size: 2.4vw;
+}
+
+.btn-success {
+    color: #ffffff;
+    background-color: #B31166;
+    border-color: #880A4C;
+    padding: 10px 14px;
+    font-size: 26px;
+    font-weight: 900;
+    font-family: 'Lato', sans-serif;
+}
+
+    .btn-success:hover {
+        color: #ffffff;
+        background-color: #572B5C;
+        border-color: #000;
+    }
+
+.control-label1 label {
+    font-family: 'Lato', sans-serif;
+    font-size: 17px;
+}
+
+.disc-design-style img{
+    height: 500px;
+    width: 500px;
+}
+
+.howitwork h4, h5, p, li {
+    font-family: 'Lato', sans-serif;
+}
+
+.howitwork li {
+    line-height: 1.5;
+}
+
+ul.a {
+    list-style-type: circle;
+}
+
+ul.b {
+    list-style-type: square;
+}
+
+.message-text-box {
+    height: 300px;
+}
+
+hr.style-eight {
+    padding: 0;
+    border: none;
+    border-top: medium double #333;
+    color: #333;
+    text-align: center;
+}
+
+    hr.style-eight:after {
+        content: "§";
+        display: inline-block;
+        position: relative;
+        top: -0.7em;
+        font-size: 1.5em;
+        padding: 0 0.25em;
+        background: white;
+    }
+
+.navbar-nav {
+    float: right;
+    margin-left: 25px;
+}
+
+.nav > li > a {
+    padding: 15px 0px;
+    margin-right: 10px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+.navbar-inverse {
+    background-color: #572B5C;
+    border-color: #572B5C;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+    .navbar-inverse .navbar-brand {
+        color: #f5f5f5;
+        font-size: 26px;
+    }
+
+.space {
+    margin-top: 40px;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #f5f5f5;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+/*  Create Edit page CSS*/
+
+   .header0 {
+        margin-top: 5%;
+    }
+
+    .header0 h1{
+        margin-bottom: 5%;
+        font-weight: 900;
+        border-bottom: 2px solid #000000;
+        padding-bottom: 5px;
+    }
+
+    .header0 input{
+        max-width: 64%;
+        border: 1px solid #cccccc;
+    height: 46px;
+    line-height: 46px;
+    background: #f2f2f2;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+        text-indent: 8px;
+    position: relative;
+    border-radius: 3px;
+    }
+
+    .header0 label{
+        font-size: 1.5vw;
+        padding-top: 0px!important;
+    }
+
+    .isagree a{
+        font-size: 1.5vw;
+    padding-top: 0px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    }
+
+    .isagree label{
+        text-align: left!important;
+        padding: 0px;
+        margin-top: 5px;
+    }
+
+    .check input {
+        padding-right: 0px;
+    }
+
+    .nopadding1 {
+        padding: 0px!important;
+    }
+
+    .nomargin {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .submit-button {
+        border-top: 2px solid #CCC;
+            padding-top: 15px;
+    }
+
+    .submit-button label{
+        float: right;
+    }
+
+    .submit-button input{
+            line-height: 0px;
+        background-color: #B31166;
+    }

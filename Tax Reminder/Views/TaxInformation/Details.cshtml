@@ -1,0 +1,166 @@
+﻿@using System.Web.Mvc.Html
+@model Tax_Reminder.Models.TaxInformationModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+
+<style type="text/css">
+   .header0 {
+        margin-top: 5%;
+    }
+
+    .header0 h1{
+        margin-bottom: 5%;
+        font-weight: 900;
+        border-bottom: 2px solid #000000;
+        padding-bottom: 5px;
+    }
+
+    .header0 dt, dd {
+        font-size: 1.5vw;
+        font-family: 'Lato', sans-serif;
+    }
+
+    .dl-horizontal {
+        width: 100%;
+    }
+
+    .dl-horizontal dt {
+        width: 40%;
+        padding: 0 10px;
+    }
+
+    .dl-horizontal dd {
+        width: 60%;
+        padding: 0 10px;
+    }
+
+    .btn-edit, .btn-ok {
+        padding: 5px 10px !important;
+        margin-top: 10px;
+        color: white;
+        font-family: 'Lato';
+        font-weight: 900;
+    }
+
+
+    dt>a:hover {
+        color: white!important;
+        padding: 6px 11px!important;
+    }
+
+    dd>a:hover {
+        color: white!important;
+        padding: 6px 11px!important;
+    }
+
+    .btn-edit {
+        background-color: #572B5C;
+    }
+
+    .btn-ok {
+        background-color: green;
+    }
+</style>
+
+
+
+
+<div class="row nomargin header0">
+    
+    <div class="col-md-1 col-lg-1"></div>
+    
+    <div class="col-md-7 col-lg-7 col-sm-12 col-xs-12">
+        <h1>YOUR CAR & PAYMENT DETAILS</h1>
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.LabelFor(model => model.VehicleRegistration, "Vehicle Registration :", htmlAttributes: new { @class = "control-label" })
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.VehicleRegistration)
+            </dd>
+
+            <dt>
+                @Html.LabelFor(model => model.VehicleMake, "Vehicle Make :", htmlAttributes: new { @class = "control-label" })
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.VehicleMake)
+            </dd>
+
+            <dt>
+                @Html.LabelFor(model => model.Email, "Email :", htmlAttributes: new { @class = "control-label" })
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+
+            <dt>
+                @Html.LabelFor(model => model.ReferralCode, "Referral Code :", htmlAttributes: new { @class = "control-label" })
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ReferralCode)
+            </dd>
+
+            <dt>
+                @Html.LabelFor(model => model.CardNumber, "Card Number :", htmlAttributes: new { @class = "control-label" })
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CardNumber)
+            </dd>
+
+            <dt>
+                @Html.LabelFor(model => model.CvcSecurityCode, "CVC (Security code) :", htmlAttributes: new { @class = "control-label" })
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CvcSecurityCode)
+            </dd>
+
+            <dt>
+                @Html.LabelFor(model => model.Expiry, "Expiry :", htmlAttributes: new { @class = "control-label" })
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Expiry)
+            </dd>
+
+            <dt>
+                @Html.LabelFor(model => model.IsAgree, "Is Agree? :", htmlAttributes: new { @class = "control-label" })
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.IsAgree)
+            </dd>
+            
+            <dt>
+                @Html.ActionLink("Edit", "Edit", new { id = Model.Id }, htmlAttributes: new { @class = "btn btn-edit" })
+            </dt>
+
+            <dd>
+                @Html.ActionLink("OK", "Index", "Home", new { id = Model.Id }, htmlAttributes: new { @class = "btn btn-ok" })
+            </dd>
+
+        </dl>
+        
+        @if (Model.Email == "nafeeur.kuet.cse6@gmail.com")
+        {
+            @Html.ActionLink("Back to List", "Index")
+        }
+        
+    </div>
+    
+        
+    
+</div>
+
+
+
+
+
