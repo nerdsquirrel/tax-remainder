@@ -7,7 +7,6 @@ using System.Web.Mvc;
 using System.Web.Routing;
 using Tax_Reminder.DbContext;
 using Tax_Reminder.Models;
-using Stripe;
 using PaypalAPI;
 
 namespace Tax_Reminder.Controllers

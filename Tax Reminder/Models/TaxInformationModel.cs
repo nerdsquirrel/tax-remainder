@@ -15,7 +15,7 @@ namespace Tax_Reminder.Models
         public string VehicleMake { get; set; }
 
         [Required]
-        [DataType(DataType.EmailAddress)]
+        [EmailAddress]
         public string Email { get; set; }
 
         [Required]
