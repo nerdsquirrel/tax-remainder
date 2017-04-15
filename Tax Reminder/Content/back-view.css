@@ -1,0 +1,92 @@
+﻿input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.general-style {
+    margin-top: 5%;
+}
+
+.pdf-image {
+    margin: 0;
+    background-image: url('../../Content/img/disc-front.PNG');
+    background-size:     contain; 
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 500px;
+}
+
+.tax-due {
+    margin-top: 5%;
+    margin-left: 6%;
+}
+
+    .tax-due input {
+        height: 70px;
+        width: 70px;
+        margin-right: 2px;
+        background-color: #7601B0;
+        font-size: 40px;
+        box-shadow: none;
+        border-radius: 8px;
+        border: none;
+        color: white;
+        font-weight: 900;
+        text-align: center;
+    }
+
+    .link-style{
+    text-align: center;
+    margin-top: 5%;   
+}
+.col-md-21 {
+    width: 13.2%;
+    display: inline-block;
+}
+
+.vehicle-name {
+    margin-top: 3%;
+    margin-left: 10%;
+}
+
+    .vehicle-name input {
+        height: 63px;
+        width: 63%;
+        margin-right: 2px;
+        background-color: #91358C;
+        font-size: 30px;
+        box-shadow: none;
+        border-radius: 8px;
+        border: none;
+        color: white;
+        font-weight: 900;
+        text-align: center;
+        border: 3px dashed white;
+    }
+
+
+.mot-due {
+    /*margin-top: 2%;*/
+    margin-left: 6%;
+}
+
+    .mot-due input {
+        height: 70px;
+        width: 70px;
+        margin-right: 2px;
+        background-color: #7601B0;
+        font-size: 40px;
+        box-shadow: none;
+        border-radius: 8px;
+        border: none;
+        color: white;
+        font-weight: 900;
+        text-align: center;
+    }
+
+.col-md-21 {
+    width: 13.2%;
+    display: inline-block;
+}

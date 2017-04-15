@@ -33,7 +33,7 @@ namespace Tax_Reminder.Controllers
 
         public ActionResult GeneratePDF()
         {
-            return new Rotativa.ActionAsPdf("BackView");
+            return new ViewAsPdf("BackView");
         }
 
         /*public ActionResult ExportPDF()
