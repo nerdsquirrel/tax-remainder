@@ -38,8 +38,7 @@ namespace Tax_Reminder.App_Start
         private static string GetAccessToken()
         {
             // getting accesstocken from paypal                
-            string accessToken = new OAuthTokenCredential
-        (ClientId, ClientSecret, GetConfig()).GetAccessToken();
+            string accessToken = new OAuthTokenCredential(ClientId, ClientSecret, GetConfig()).GetAccessToken();
 
             return accessToken;
         }
